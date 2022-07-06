@@ -1,0 +1,169 @@
+#modular-drawer {
+  position: fixed;
+  z-index: 10;
+  width: auto;
+  padding: 0.5rem;
+  background-image: var(--modular-background);
+  overflow: auto;
+  color: var(--modular-text-color);
+  animation: var(--modular-drawer-animation);
+  -moz-animation: var(--modular-drawer-animation);
+  -ms-animation: var(--modular-drawer-animation);
+  -o-animation: var(--modular-drawer-animation);
+}
+
+#modular-drawer.left,
+#modular-drawer.right {
+  top: 0;
+  bottom: 0;
+}
+
+#modular-drawer.top,
+#modular-drawer.bottom {
+  left: 0;
+  right: 0;
+}
+
+#modular-drawer.top,
+#modular-drawer.top-left,
+#modular-drawer.top-right {
+  --modular-drawer-animation-in: slideTop 0.3s forwards;
+  --modular-drawer-animation-out: slideOutTop 0.3s forwards;
+  bottom: auto;
+  top: 0;
+}
+
+#modular-drawer.bottom,
+#modular-drawer.bottom-left,
+#modular-drawer.bottom-right {
+  --modular-drawer-animation-in: slideBottom 0.3s forwards;
+  --modular-drawer-animation-out: slideOutBottom 0.3s forwards;
+  top: auto;
+  bottom: 0;
+}
+
+#modular-drawer.top-left,
+#modular-drawer.bottom-left,
+#modular-drawer.left {
+  right: auto;
+  left: 0;
+}
+
+#modular-drawer.top-right,
+#modular-drawer.bottom-right,
+#modular-drawer.right {
+  left: auto;
+  right: 0;
+}
+
+#modular-drawer.left {
+  --modular-drawer-animation-in: slideLeft 0.3s forwards;
+  --modular-drawer-animation-out: slideOutLeft 0.3s forwards;
+}
+
+#modular-drawer.right {
+  --modular-drawer-animation-in: slideRight 0.3s forwards;
+  --modular-drawer-animation-out: slideOutRight 0.3s forwards;
+}
+
+#modular-drawer.ease-in {
+  --modular-drawer-animation: var(--modular-drawer-animation-in);
+}
+
+#modular-drawer.ease-out {
+  --modular-drawer-animation: var(--modular-drawer-animation-out);
+}
+
+#modular-drawer .elements {
+  padding: 0.75rem;
+}
+
+#modular-drawer .close-button {
+  outline: 0 solid transparent;
+  outline-offset: 2px;
+}
+
+#modular-drawer.top .close-button svg,
+#modular-drawer.top-left .close-button svg,
+#modular-drawer.top-right .close-button svg {
+  transform: rotate(90deg);
+}
+
+#modular-drawer.bottom .close-button svg,
+#modular-drawer.bottom-left .close-button svg,
+#modular-drawer.bottom-right .close-button svg {
+  transform: rotate(-90deg);
+}
+
+#modular-drawer.right .close-button svg {
+  transform: rotate(180deg);
+}
+
+#modular-drawer .close-button:focus {
+  outline: 0 solid transparent;
+  outline-offset: 2px;
+}
+
+#modular-drawer .buttons-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+#modular-drawer .element {
+  margin: 0.75rem 0.5rem;
+}
+
+#modular-drawer .element .button {
+  display: flex;
+  flex-direction: row;
+}
+
+#modular-drawer .element .button .icon {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+#modular-drawer .element .button .text {
+  margin: auto;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+#modular-drawer .element .button .active {
+  color: rgba(217, 119, 6, 1);
+  cursor: default;
+}
+
+#modular-drawer .element .button .inactive {
+  cursor: pointer;
+}
+
+#modular-drawer .element .button .inactive:hover {
+  color: rgba(96, 165, 250, 1);
+}
+
+#modular-drawer .container-internal {
+  display: flex;
+  flex-direction: column;
+}
+
+#modular-drawer .close-button svg {
+  fill: var(--modular-text-color);
+}
+
+#modular-drawer .close-button svg:hover {
+  fill: rgba(217, 119, 6, 1);
+}
+
+@media (hover: none) {
+  #modular-drawer .close-button:hover svg {
+    fill: var(--modular-text-color);
+  }
+}

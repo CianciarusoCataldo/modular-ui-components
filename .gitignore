@@ -1,0 +1,6 @@
+node_modules
+dist
+playground/src/modular-ui-components-preview
+build
+coverage
+stats.html

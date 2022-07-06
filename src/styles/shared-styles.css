@@ -1,0 +1,90 @@
+[id^="modular-"] {
+  --modular-background-color-light: #f5f5f5;
+  --modular-background-color-dark: #1d232e;
+  --modular-text-color-light: #1b1b1b;
+  --modular-text-color-dark: white;
+  --modular-background-dark: linear-gradient(to right, #2d3748, #1d232e);
+  --modular-background-light: linear-gradient(to right, #fff, #eaebec);
+}
+
+[id^="modular-"],
+[id^="modular-"]:hover,
+[id^="modular-"]:active {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+
+[id^="modular-"]:not(.dark) {
+  --modular-background-color: var(
+    --modular-custom-background-color-light,
+    var(--modular-background-color-light)
+  );
+  --modular-background: var(
+    --modular-custom-background-light,
+    var(--modular-background-light)
+  );
+  --modular-text-color: var(
+    --modular-custom-text-color-light,
+    var(--modular-text-color-light)
+  );
+  --modular-link-color: rgb(37, 99, 235);
+}
+
+[id^="modular-"].dark {
+  --modular-background-color: var(
+    --modular-custom-background-color-dark,
+    var(--modular-background-color-dark)
+  );
+  --modular-background: var(
+    --modular-custom-background-dark,
+    var(--modular-background-dark)
+  );
+  --modular-text-color: var(
+    --modular-custom-text-color-dark,
+    var(--modular-text-color-dark)
+  );
+  --modular-link-color: white;
+}
+
+[id^="modular-"]:not(.dark):hover {
+  --modular-link-color: rgb(33, 89, 211);
+}
+
+[id^="modular-"].dark:hover {
+  --modular-link-color: rgb(219, 221, 224);
+}
+
+[id^="modular-"] .component-hidden,
+[id^="modular-"].component-hidden {
+  display: none !important;
+}
+
+[id^="modular-"].shadowed,
+[id^="modular-"] .shadowed {
+  -webkit-box-shadow: 0 5px 13px -1px #464545;
+  -moz-box-shadow: 0 5px 13px -1px #464545;
+  -o-box-shadow: 0 5px 13px -1px #464545;
+  box-shadow: 0 5px 13px -1px #464545;
+}
+
+[id^="modular-"] .box-label {
+  padding: 0.4rem;
+  display: flex;
+  text-align: start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+[id^="modular-"].styled .box-component .box-label {
+  color: var(--modular-text-color);
+}
+
+[id^="modular-"] .box-component {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0.1rem;
+}
+

@@ -1,0 +1,48 @@
+const engineConfig = {
+  appName: "Modular-ui-components",
+  redux: {
+    modal: false,
+    ui: true,
+    epics: [],
+    reducers: {},
+    preload: {},
+    darkMode: true,
+    titles: true,
+  },
+  router: {
+    basename: "/modular-ui-components",
+    homePage: "/",
+    pages: {
+      Button: "/components/atoms/Button",
+      Card: "/components/molecules/Card",
+      Carousel: "/components/molecules/Carousel",
+      CheckBox: "/components/atoms/CheckBox",
+      CodeBox: "/components/atoms/CodeBox",
+      Container: "/components/molecules/Container",
+      Counter: "/components/molecules/Counter",
+      Divider: "/components/atoms/Divider",
+      Drawer: "/components/molecules/Drawer",
+      Dropdown: "/components/molecules/Dropdown",
+      Form: "/components/molecules/Form",
+      Input: "/components/atoms/Input",
+      Label: "/components/atoms/Label",
+      Link: "/components/atoms/Link",
+      List: "/components/atoms/List",
+      Modal: "/components/atoms/Modal",
+      Rater: "/components/molecules/Rater",
+      Spinner: "/components/molecules/Spinner",
+      Table: "/components/molecules/Table",
+      Toggle: "/components/atoms/Toggle",
+    },
+  },
+  i18n: {
+    fallbackLanguage: "en",
+    supportedLanguages: ["en", "it", "es", "fr", "de"],
+    namespaces: ["list", "overview", "common", "drawer", "codebox"],
+    defaultNamespace: "common",
+    loadPath: "/modular-ui-components/locales/{{lng}}/{{ns}}.json",
+    pagesNamespace: "titles",
+  },
+};
+
+export default engineConfig;
