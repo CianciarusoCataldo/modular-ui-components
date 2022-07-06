@@ -53,7 +53,7 @@ const HeaderContent = () => {
         <div className="fixed flex flex-row">
           <div className="flex flex-row m-auto pr-4">
             <Link
-              to="https://cianciarusocataldo.github.io/modular-ui/docs"
+              to="https://cianciarusocataldo.github.io/modular-ui-components/docs"
               className="m-auto"
               newTab
             >
@@ -62,7 +62,7 @@ const HeaderContent = () => {
             <div className="m-auto hidden xsm:block">
               <Link
                 dark={dark}
-                to="https://cianciarusocataldo.github.io/modular-ui/docs"
+                to="https://cianciarusocataldo.github.io/modular-ui-components/docs"
                 newTab
               >
                 {t("docs")}
@@ -137,7 +137,7 @@ const HeaderContent = () => {
             <Link
               dark={dark}
               newTab
-              to="https://github.com/CianciarusoCataldo/modular-ui"
+              to="https://github.com/CianciarusoCataldo/modular-ui-components"
             >
               <p className="break-words text-lg sm:text-xl md:text-2xl lg:text-4xl">
                 {APP_NAME}

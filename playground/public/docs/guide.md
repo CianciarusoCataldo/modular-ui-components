@@ -1,39 +1,39 @@
-<div align="center">
-<img width="640px" alt="" src="https://user-images.githubusercontent.com/47371276/154186533-0ef65901-018c-4151-a5cc-c9bc2e25fc51.png" />
-</div>
+# modular-ui-components
 
-<br>
+---
 
-## Modular-ui philosophy
+## Modular-ui-components philosophy
 
 This library is built upon few (but important) concepts:
 
--   Small library size, to not impact on final app bundle size
--   Few dependencies, to not introduce a bunch of additional packages (that could also introduce bugs or version conflicts with pre-existent packages)
--   Let the user customize every part as desired, but with default values set otherwise, to make every component ready to be used without so many parameters
--   Every component should be integrable into every react app, so their behaviour must be customizable too (with callbacks, for example)
+- Small library size, to not impact on final app bundle size
+- Few dependencies, to not introduce a bunch of additional packages (that could also introduce bugs or version conflicts with pre-existent packages)
+- Let the user customize every part as desired, but with default values set otherwise, to make every component ready to be used without so many parameters
+- Every component should be integrable into every react app, so their behaviour must be customizable too (with callbacks, for example)
 
-The same concepts are also the base of another project I maintain, [modular-app](https://github.com/CianciarusoCataldo/modular-app), a ready to use react app template that use this library internally (check it out, it is also the base of [Modular-ui guide page](https://cianciarusocataldo.github.io/modular-ui/) !)
+The same concepts are also the base of another project I maintain, [modular-engine](https://github.com/CianciarusoCataldo/modular-engine) (check it out, it is also the base of [Modular-ui-components guide page](https://cianciarusocataldo.github.io/modular-ui-components/) !)
 
-<br><br>
+<br>
 
 ## Components building process
 
 This library use a standardized process to build every component. As result, every component has a shared initial logic, shared CSS styles and shared properties.
 
+<br>
+
 ### Shared components properties
 
 Some properties are shared between all components, for a smoother dev experience. In addition, this makes every single component easily re-usable. Let's see them in details:
 
-| Property    | Description                                                                                                         |
-| ----------- | ------------------------------------------------------------------------------------------------------------------- |
-| `className` | custom className applied on main container                                                                          |
-| `dark`      | Enable/disable dark mode                                                                                            |
-| `hide`      | Hide/show component                                                                                                 |
-| `id`        | `data-id` parameter (for testing purpose, to easily find the component into the DOM)                                |
-| `shadow`    | Enable/disable shadow behind component                                                                              |
-| `style`     | [Css inline properties](https://www.w3schools.com/html/html_css.asp) applied on main container                      |
-| `unstyled`  | If `true`, no standard modular-ui styles will be applied on the components (useful for example, with image buttons) |
+| Property    | Description                                                                                                                    |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `className` | custom className applied on main container                                                                                     |
+| `dark`      | Enable/disable dark mode                                                                                                       |
+| `hide`      | Hide/show component                                                                                                            |
+| `id`        | `data-id` parameter (for testing purpose, to easily find the component into the DOM)                                           |
+| `shadow`    | Enable/disable shadow behind component                                                                                         |
+| `style`     | [Css inline properties](https://www.w3schools.com/html/html_css.asp) applied on main container                                 |
+| `unstyled`  | If `true`, no standard modular-ui-components styles will be applied on the components (useful for example, with image buttons) |
 
 With these shared properties is possible to drive every component behaviour and UI with an external state management system ([modular](https://github.com/CianciarusoCataldo/modular) library uses these components internally in conjunction with [redux](https://redux.js.org/))
 
@@ -41,7 +41,7 @@ With these shared properties is possible to drive every component behaviour and 
 
 ### Customizable UI
 
-Modular-ui components UI is globally configurable, with CSS variables. By defining some specific custom CSS variables into your app css, you'll change the UI of all components:
+Modular-ui-components components UI is globally configurable, with CSS variables. By defining some specific custom CSS variables into your app css, you'll change the UI of all components:
 
 | CSS variable                              | Description                                                                                                 | Default value                                 | Related CSS attribute |
 | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------- | --------------------------------------------- | --------------------- |
@@ -58,19 +58,21 @@ If you don't set these variables, the default values will be used.
 
 ### Box components
 
-Some components are designed with a specific structure, to better control and customize their look and feel. This type of components is called `Box Component`, for their particular structure. In addition to the [shared properties](#shared-components-properties), as they are part of modular-ui, they accept 3 additional (and optional) properties:
+Some components are designed with a specific structure, to better control and customize their look and feel. This type of components is called `Box Component`, for their particular structure. In addition to the [shared properties](#shared-components-properties), as they are part of modular-ui-components, they accept 3 additional (and optional) properties:
 
--   `label`, a string or a component rendered above the final component
--   `value`, a specific property that drive the component UI, its type vary depends on component itself (for example, for the CheckBox component, it is the check status, as a `boolean` ) 
--   `defaultValue`, the default value to use when `value` is not given or is `undefined`
+- `label`, a string or a component rendered above the final component
+- `value`, a specific property that drive the component UI, its type vary depends on component itself (for example, for the CheckBox component, it is the check status, as a `boolean` )
+- `defaultValue`, the default value to use when `value` is not given or is `undefined`
 
 <div align="center">
 <img width="380px" alt="" src="https://user-images.githubusercontent.com/47371276/153539556-be82468f-b7c1-4753-8fe6-c832c35b7027.png" />
 </div>
 
-<br><br>
+<br>
 
-## Getting started
+---
+
+## Getting started<img src="https://user-images.githubusercontent.com/47371276/154059478-c044b278-5ef4-4036-8113-a18531e35194.svg" align="left" width="30" />
 
 ### Installation
 
@@ -78,72 +80,71 @@ If you want to use this library inside your project, just install it:
 
 ```
 
-npm i @cianciarusocataldo/modular-ui
+npm i modular-ui-components
 
 ```
 
 ### Usage
 
-After installation, you can use every `modular-ui` component in your app. Run this example to see them in action:
+After installation, you can use every `modular-ui-components` component in your app. Run this example to see them in action:
 
 ```tsx
-import { Card, Container, Link } from "@cianciarusocataldo/modular-ui";
+import {
+  Card,
+  Container,
+  Link,
+} from "@cianciarusocataldo/modular-ui-components";
 import { render } from "react-dom";
 
-render(<Container animated>
-          <Card
-             dark={true}
-             body={<p>This page is entirely made with modular-ui components !</p>}
-             footer={<Link to="https://cianciarusocataldo.github.io/modular-ui">Modular-ui page</Link>}
-          />
-       </Container>,     
-       document.getElementById("root"));
-
+render(
+  <Container animated>
+    <Card
+      dark={true}
+      body={<p>This page is entirely made with modular-ui components !</p>}
+      footer={
+        <Link to="https://cianciarusocataldo.github.io/modular-ui-components">
+          Modular-ui page
+        </Link>
+      }
+    />
+  </Container>,
+  document.getElementById("root")
+);
 ```
 
-[![Edit modular-ui playground](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/modular-ui-playground-gfpbb?fontsize=14&hidenavigation=1&theme=dark&view=preview)
+[![Edit modular-ui-components playground](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/modular-ui-playground-gfpbb?fontsize=14&hidenavigation=1&theme=dark&view=preview)
 
 <br>
 
 If you want to customize the UI globally, initialize the dedicated [CSS variables](#customizable-ui):
 
 ```css
-*{
-  --modular-text-color : #f5f5f5;
+* {
+  --modular-text-color: #f5f5f5;
   --modular-background-color: #1b1b1b;
- }
-
+}
 ```
-<br><br>
 
-## Tests
+---
+
+## Tests<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153876497-124aa299-63d9-46bf-a090-6d53a7417f4d.png" width="30"/>
 
 Unit tests for every component are located inside `tests` folder. The test script is executed with pre-defined test command:
 
     npm run test
 
-This lib is analyzed and tested with different automated code analysis systems:
+<br>
 
--   [AppVeyor](https://ci.appveyor.com/project/CianciarusoCataldo/modular-ui)
--   [CircleCI](https://app.circleci.com/pipelines/github/CianciarusoCataldo/modular-ui)
--   [Cirrus CI](https://cirrus-ci.com/github/CianciarusoCataldo/modular-ui)
--   [Codacy](https://app.codacy.com/gh/CianciarusoCataldo/modular-ui)
--   [Code Climate](https://codeclimate.com/github/CianciarusoCataldo/modular-ui)
--   [CodeCov](https://app.codecov.io/gh/CianciarusoCataldo/modular-ui)
--   [CodeFactor](https://www.codefactor.io/repository/github/cianciarusocataldo/modular-ui)
--   [Coveralls](https://coveralls.io/github/CianciarusoCataldo/modular-ui)
--   [Hound](https://houndci.com/)
--   [Scrutinizer](https://scrutinizer-ci.com/g/CianciarusoCataldo/modular-ui/)
--   [Wercker](https://app.wercker.com/CianciarusoCataldo/modular-ui/runs)
+---
 
-<br><br>
+## Authors<img align="left" src="https://user-images.githubusercontent.com/47371276/154069439-eece1dc0-a82c-4322-95f4-cf2211226fcf.png" alt="" width="30" />
 
-## Authors
+- [**Cataldo Cianciaruso**](https://github.com/CianciarusoCataldo)
 
--   [**Cataldo Cianciaruso**](https://github.com/CianciarusoCataldo)
+<br>
 
-<br><br>
+---
 
-## License
+## License<img align="left" src="https://user-images.githubusercontent.com/47371276/154152300-69b2ebbd-2461-49a7-b1c9-3570f4b51156.png" alt="" width="30" />
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details

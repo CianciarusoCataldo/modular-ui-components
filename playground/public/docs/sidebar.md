@@ -1,9 +1,9 @@
--   [Documentation](guide "Modular-ui - documentation")
--   [Changelog](changelog "Modular-ui - changelog")
--   [Status](status "Modular-ui - Status")
+-   [Documentation](guide "Modular-ui-components - documentation")
+-   [Changelog](changelog "Modular-ui-components - changelog")
+-   [Status](status "Modular-ui-components - Status")
 -   **Links**
--   [Github](https://github.com/cianciarusocataldo/modular-ui)
--   [NPM](https://www.npmjs.com/package/@cianciarusocataldo/modular-ui)
+-   [Github](https://github.com/cianciarusocataldo/modular-ui-components)
+-   [NPM](https://www.npmjs.com/package/@cianciarusocataldo/modular-ui-components)
 -   **Modular ecosystem**
--   [Modular](https://github.com/cianciarusocataldo/modular)
--   [Modular-engine](https://github.com/cianciarusocataldo/modular-engine)
+-   [Modular](https://github.com/cianciarusocataldo/modular-components)
+-   [Modular-engine](https://github.com/cianciarusocataldo/modular-engine-components)
