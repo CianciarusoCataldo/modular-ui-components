@@ -1,6 +1,13 @@
-# modular-ui-components
+# modular-ui-components<img src="https://user-images.githubusercontent.com/47371276/153836684-89e0f709-afd8-46d5-b2b0-41cb38614809.png" align="left" alt="" width="40"/>
+
+![NPM](https://img.shields.io/npm/l/modular-ui-components?label=License&style=for-the-badge)
+![npm (scoped)](https://img.shields.io/npm/v/modular-ui?color=orange%20&label=Latest%20version&style=for-the-badge&logo=npm)
+![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/modular-ui?label=Package%20size&style=for-the-badge&logo=npm)
+![Maintenance](https://img.shields.io/maintenance/yes/2025?label=Maintained&style=for-the-badge)
 
 ---
+
+UI web components for every use, easy to customize and to integrate into every app.
 
 ## Modular-ui-components philosophy
 
@@ -89,11 +96,7 @@ npm i modular-ui-components
 After installation, you can use every `modular-ui-components` component in your app. Run this example to see them in action:
 
 ```tsx
-import {
-  Card,
-  Container,
-  Link,
-} from "@cianciarusocataldo/modular-ui-components";
+import { Card, Container, Link } from "modular-ui-components";
 import { render } from "react-dom";
 
 render(
