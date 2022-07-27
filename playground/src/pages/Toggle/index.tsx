@@ -1,4 +1,4 @@
-import { DEMO_COMMON_PROPS } from "app/constants/demo-props";
+import { DEMO_COMMON_PROPS } from "constants/demo-props";
 
 import OnIcon from "./on.svg";
 import OffIcon from "./off.svg";
@@ -6,7 +6,7 @@ import OffIcon from "./off.svg";
 import { BooleanProp, Demo, StringProp } from "@cianciarusocataldo/demo-ui";
 
 import { Toggle } from "modular-ui-components-preview";
-import { ComponentPage } from "app/components/ComponentPage";
+import { ComponentPage } from "components/ComponentPage";
 
 const TogglePage = () => (
   <ComponentPage

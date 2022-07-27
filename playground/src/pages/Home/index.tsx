@@ -2,23 +2,24 @@ import { useSelector } from "react-redux";
 
 import { useHomePageTranslation } from "hooks/localization";
 
-import { getPages } from "@cianciarusocataldo/modular-engine";
+import { closeDrawer, getRoutes, goTo } from "modular-plugins";
 
 import {
+  Button,
   Card,
   CodeBox,
   Link,
   List,
   SupportedEnvironment,
 } from "modular-ui-components-preview";
-
-import AppLabel from "app/components/AppLabel";
-import AppPage from "app/components/AppPage";
-import RouterLink from "app/components/RouterLink";
+import { useDispatch } from "react-redux";
+import AppLabel from "components/AppLabel";
+import AppPage from "components/AppPage";
 
 const HomePage = () => {
   const t = useHomePageTranslation();
-  const PATHS = useSelector(getPages);
+  const dispatch = useDispatch();
+  const PATHS = useSelector(getRoutes);
 
   const PARSERS = {
     description: (localizedString: string) => {
@@ -108,16 +109,21 @@ const HomePage = () => {
           body={
             <List
               elements={Object.keys(PATHS)
+                .filter((path) => path !== "Home")
                 .sort()
                 .map((routeKey, index) => {
                   return (
                     <div key={`link_${index}`}>
-                      <RouterLink
+                      <Button
+                        unstyled
+                        onClick={() => {
+                          dispatch(goTo(PATHS[routeKey]));
+                          dispatch(closeDrawer());
+                        }}
                         className="text-gray-700 hover:text-blue-700 py-1 text-lg"
-                        to={PATHS[routeKey]}
                       >
                         {routeKey}
-                      </RouterLink>
+                      </Button>
                     </div>
                   );
                 })}

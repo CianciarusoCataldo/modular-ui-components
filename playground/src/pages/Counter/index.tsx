@@ -6,8 +6,8 @@ import {
 } from "@cianciarusocataldo/demo-ui";
 
 import { Counter } from "modular-ui-components-preview";
-import { ComponentPage } from "app/components/ComponentPage";
-import { DEMO_COMMON_PROPS } from "app/constants/demo-props";
+import { ComponentPage } from "components/ComponentPage";
+import { DEMO_COMMON_PROPS } from "constants/demo-props";
 
 const CounterPage = () => (
   <ComponentPage

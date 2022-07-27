@@ -1,11 +1,11 @@
 import React from "react";
 
-import { DEMO_COMMON_PROPS } from "app/constants/demo-props";
+import { DEMO_COMMON_PROPS } from "constants/demo-props";
 
 import { Demo, SelectProp } from "@cianciarusocataldo/demo-ui";
 
 import { Button, Drawer } from "modular-ui-components-preview";
-import { ComponentPage } from "app/components/ComponentPage";
+import { ComponentPage } from "components/ComponentPage";
 
 const DrawerPage = () => {
   const [isVisible, setVisible] = React.useState(false);

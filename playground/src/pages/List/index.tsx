@@ -1,9 +1,9 @@
-import { DEMO_COMMON_PROPS } from "app/constants/demo-props";
+import { DEMO_COMMON_PROPS } from "constants/demo-props";
 
 import { BooleanProp, Demo, NumberProp } from "@cianciarusocataldo/demo-ui";
 
 import { List } from "modular-ui-components-preview";
-import { ComponentPage } from "app/components/ComponentPage";
+import { ComponentPage } from "components/ComponentPage";
 
 const ListPage = () => (
   <ComponentPage

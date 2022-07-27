@@ -3,10 +3,10 @@ import { BooleanProp, Demo, SelectProp } from "@cianciarusocataldo/demo-ui";
 import ReactImage from "./react.svg";
 import ReduxImage from "./redux.svg";
 
-import { DEMO_COMMON_PROPS } from "app/constants/demo-props";
+import { DEMO_COMMON_PROPS } from "constants/demo-props";
 
 import { Spinner } from "modular-ui-components-preview";
-import { ComponentPage } from "app/components/ComponentPage";
+import { ComponentPage } from "components/ComponentPage";
 
 const SpinnerPage = () => (
   <ComponentPage

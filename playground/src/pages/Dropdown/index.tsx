@@ -1,8 +1,8 @@
 import { BooleanProp, Demo, StringProp } from "@cianciarusocataldo/demo-ui";
 
 import { Dropdown } from "modular-ui-components-preview";
-import { ComponentPage } from "app/components/ComponentPage";
-import { DEMO_COMMON_PROPS } from "app/constants/demo-props";
+import { ComponentPage } from "components/ComponentPage";
+import { DEMO_COMMON_PROPS } from "constants/demo-props";
 
 const DropdownPage = () => (
   <ComponentPage

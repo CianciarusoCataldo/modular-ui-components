@@ -1,4 +1,4 @@
-name: Modular-UI CI
+name: Modular-ui-components CI
 
 on:
   push:

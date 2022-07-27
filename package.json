@@ -1,6 +1,6 @@
 {
   "name": "modular-ui-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React components for every app, easy to use and customize",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -28,14 +28,14 @@
   "homepage": "https://github.com/CianciarusoCataldo/modular-ui-components#readme",
   "peerDependencies": {
     "classnames": "^2.3.1",
-    "react": ">=16.x.0"
+    "react": ">=16"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
     "@types/jest": "^27.0.2",
     "@types/mocha": "^9.0.0",
-    "@types/react": "^16.14.5",
+    "@types/react": ">=16",
     "babel-jest": "^26.6.0",
     "chokidar": "^3.5.3",
     "chokidar-cli": "^3.0.0",
@@ -48,7 +48,7 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.4",
     "react": ">=16.x.0",
-    "react-dom": ">=16.x.0",
+    "react-dom": ">=16",
     "rollup": "^2.44.0",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-banner2": "^1.2.2",
@@ -65,7 +65,7 @@
     "build-dev": "rollup -c ./config/rollup.dev.config.js",
     "analyze": "rollup -c ./config/rollup.analyze.config.js",
     "build-watch": "rollup -c ./config/rollup.dev.config.js -w",
-    "watch": "chokidar \"src/**/*.css\" \"src/**/*.tsx\" \"src/**/*.tsx\" -c \"npm run build-dev\"",
+    "watch": "chokidar \"src/**/*.css\" \"src/**/*.tsx\" \"src/**/*.ts\" -c \"npm run build-dev\"",
     "check-types": "tsc",
     "prestart": "npm run build-dev",
     "start": "npm-run-all --parallel \"watch\" \"start-playground\"",
@@ -74,7 +74,6 @@
     "build-playground": "cd playground && npm run build",
     "predeploy": "sh ./scripts/pre-deploy.sh",
     "deploy": "sh ./scripts/deploy.sh",
-    "test": "sh ./scripts/start-tests.sh",
-    "update:docs": "sh ./scripts/update-docs.sh"
+    "test": "sh ./scripts/start-tests.sh"
   }
 }

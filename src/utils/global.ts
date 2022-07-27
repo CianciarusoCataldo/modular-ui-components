@@ -33,7 +33,7 @@ export interface CommonProps {
  *
  * @see https://cianciarusocataldo.github.io/modular-ui/docs/#/guide?id=box-components
  */
-export interface BoxComponent<T = any, K = JSX.Element | Element> {
+export interface BoxComponent<T = any, K = JSX.Element> {
   /** Actual component value */
   value?: T;
 
@@ -41,7 +41,7 @@ export interface BoxComponent<T = any, K = JSX.Element | Element> {
   icon?: K;
 
   /** Box component label */
-  label?: string | Element | JSX.Element;
+  label?: string | JSX.Element;
 }
 
 /**
@@ -99,7 +99,7 @@ export interface ComponentWithChildren<T = JSX.Element> {
  *
  * @copyright 2022 Cataldo Cianciaruso
  */
-export type BuilderComponent = Element | JSX.Element | string;
+export type BuilderComponent = JSX.Element | string;
 
 /** Supported components wrappers */
 export type Wrappers = "div" | "a" | "header" | "button" | "footer" | "p";

@@ -2,12 +2,12 @@ import Elem0 from "./elem0.png";
 import Elem1 from "./elem1.png";
 import Elem2 from "./elem2.png";
 
-import { DEMO_COMMON_PROPS } from "app/constants/demo-props";
+import { DEMO_COMMON_PROPS } from "constants/demo-props";
 
 import { Demo, StringProp } from "@cianciarusocataldo/demo-ui";
 
 import { Carousel } from "modular-ui-components-preview";
-import { ComponentPage } from "app/components/ComponentPage";
+import { ComponentPage } from "../../components/ComponentPage";
 
 const CarouselPage = () => (
   <ComponentPage

@@ -68,7 +68,7 @@ const Checkbox: CheckBoxComponent = ({
 
       return {
         name: "modular-checkbox",
-        Component: actualValue && iconToShow,
+        Component: actualValue ? iconToShow : <div />,
         commonProps,
         additionalProps: {
           onClick: () => {

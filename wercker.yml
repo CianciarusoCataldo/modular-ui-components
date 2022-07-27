@@ -2,14 +2,14 @@ box: node
 build:
   steps:
     - script:
-        name: modular-ui lib build
+        name: modular-ui-components lib build
         code: |
           npm i
           npm run build
 test:
   steps:
     - script:
-        name: modular-ui lib tests
+        name: modular-ui-components lib tests
         code: |
           npm i
           npm run test
